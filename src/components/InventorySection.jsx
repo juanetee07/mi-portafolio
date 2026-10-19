@@ -48,11 +48,13 @@ export default function InventorySection({ t, gainXP }) {
 
       {/* SECCIÓN DE INVENTARIO TÉCNICO CON REACT ICONS */}
       <section className="mb-24">
-        <div className="flex flex-col md:flex-row md:items-end gap-3 mb-8 bg-slate-950/50 inline-block px-4 py-2 rounded-xl backdrop-blur-sm border border-slate-800">
-          <h2 className="text-3xl font-bold text-white uppercase drop-shadow-md">
-            <span className="text-purple-500">_</span>{t.skillsTitle}
+        <div className="inline-flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3.5 mb-8 bg-slate-950/60 border border-slate-800/90 px-4 py-2.5 rounded-2xl backdrop-blur-sm shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight flex items-center gap-2">
+            <span className="text-cyan-400">⚡</span> {t.skillsTitle}
           </h2>
-          <span className="text-cyan-500 text-sm font-bold animate-pulse">{t.skillsSub}</span>
+          <span className="text-cyan-400 font-mono text-xs sm:text-sm font-semibold tracking-wide bg-cyan-950/50 border border-cyan-800/50 px-2.5 py-1 rounded-full animate-pulse self-start sm:self-auto">
+            {t.skillsSub}
+          </span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[

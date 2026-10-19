@@ -5,7 +5,7 @@ export default function HeroSection({ t, xp, gainXP }) {
   const isMax = currentLevel === 5 && xp >= 500;
 
   return (
-    <section id="inicio" className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-24 md:mb-32 relative">
+    <section id="inicio" className="scroll-mt-28 flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-24 md:mb-32 relative">
       
       {/* CONTENEDOR DE TEXTO */}
       <div className="flex-1 space-y-6 text-center md:text-left relative z-20">

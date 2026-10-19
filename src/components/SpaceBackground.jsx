@@ -81,8 +81,13 @@ export default function SpaceBackground({ scrollY }) {
       >
         <svg className="w-16 h-16 md:w-24 md:h-24 text-orange-400 drop-shadow-[0_0_15px_rgba(251,146,60,0.6)]" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2C10.9 2 10 2.9 10 4V7.5L5 9V5H2V19H5V15L10 16.5V20C10 21.1 10.9 22 12 22C13.1 22 14 21.1 14 20V16.5L19 15V19H22V5H19V9L14 7.5V4C14 2.9 13.1 2 12 2ZM12 9.5C13.4 9.5 14.5 10.6 14.5 12C14.5 13.4 13.4 14.5 12 14.5C10.6 14.5 9.5 13.4 9.5 12C9.5 10.6 10.6 9.5 12 9.5Z"/>
+          {/* Punto rojo perfectamente centrado en el lente del telescopio/satélite */}
+          <circle cx="12" cy="12" r="1.5" fill="#ef4444" />
+          <circle cx="12" cy="12" r="2.2" fill="#ef4444" opacity="0.6">
+            <animate attributeName="r" values="1.2;2.8;1.2" dur="1.8s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.8;0.1;0.8" dur="1.8s" repeatCount="indefinite" />
+          </circle>
         </svg>
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
       </div>
 
       {/* 4. Astronauta Flotando (Velocidad horizontal reducida al 0.1 y ajustado para móviles) */}

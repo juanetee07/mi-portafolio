@@ -2,7 +2,7 @@ import { FaShieldAlt } from 'react-icons/fa';
 
 export default function TimelineSection({ t, gainXP }) {
   return (
-    <section id="historial" className="mb-24">
+    <section id="historial" className="scroll-mt-28 mb-24">
       <h2 className="text-3xl font-bold text-white mb-8 uppercase drop-shadow-md flex items-center gap-2 bg-slate-950/50 inline-block px-4 py-2 rounded-xl backdrop-blur-sm border border-slate-800">
         <span className="text-purple-500">⚔️</span> {t.timelineTitle}
       </h2>

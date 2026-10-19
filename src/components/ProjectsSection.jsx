@@ -10,7 +10,7 @@ export default function ProjectsSection({ t, lang = 'es', gainXP, onOpenProjectM
   };
 
   return (
-    <section id="proyectos" className="mb-24">
+    <section id="proyectos" className="scroll-mt-28 mb-24">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <h2 className="text-3xl font-bold text-white uppercase drop-shadow-md bg-slate-950/50 inline-block px-4 py-2 rounded-xl backdrop-blur-sm border border-slate-800">
           <span className="text-cyan-500">#</span> {t.projectsTitle}
