@@ -24,7 +24,7 @@ export default function Navbar({ t, lang, setLang, xp, gainXP }) {
         <div 
           role="button"
           tabIndex={0}
-          className="flex items-center gap-2 group cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-1" 
+          className="flex items-center gap-3 group cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-1" 
           onClick={handleSecretLogo} 
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -35,9 +35,15 @@ export default function Navbar({ t, lang, setLang, xp, gainXP }) {
           title={isEs ? "¡Encontraste un secreto! +50 XP" : "You found a secret! +50 XP"}
           aria-label={isEs ? "Logo JCL_DEV - Ganar 50 de experiencia" : "JCL_DEV Logo - Gain 50 XP"}
         >
-          <svg className="w-8 h-8 text-cyan-400 group-hover:rotate-180 transition-transform duration-700 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
+          <div className="relative w-11 h-11 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.45)] group-hover:border-purple-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group-hover:scale-105 group-hover:rotate-6 transition-all duration-300 bg-white shrink-0 p-0.5">
+            <img 
+              src="/logo-bordercollie.webp" 
+              alt="Logo Border Collie Dev" 
+              width="48" 
+              height="48" 
+              className="w-full h-full object-contain rounded-full" 
+            />
+          </div>
           <div className="text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 tracking-widest uppercase font-mono">
             JCL_DEV<span className="text-cyan-400 animate-pulse">_</span>
           </div>
@@ -55,9 +61,13 @@ export default function Navbar({ t, lang, setLang, xp, gainXP }) {
             </a>
           ))}
           
-          <div className="bg-slate-800 border border-purple-500/50 px-3 py-1 rounded-full text-cyan-400 flex items-center gap-2 shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+          <div className="bg-slate-800 border border-purple-500/50 px-3 py-1 rounded-full text-cyan-400 flex items-center gap-1.5 shadow-[0_0_10px_rgba(168,85,247,0.2)]">
             <span className="text-xs uppercase text-slate-400">XP:</span> 
-            <span className="font-black animate-pulse font-mono">{xp}</span>
+            <span className="font-black font-mono">
+              <span className="animate-pulse">{xp}</span>
+              <span className="text-[10px] text-purple-400 font-normal ml-0.5">/500</span>
+              {xp >= 500 && <span className="text-[10px] text-cyan-300 font-bold ml-1">[MAX]</span>}
+            </span>
           </div>
           
           <button 
@@ -102,7 +112,10 @@ export default function Navbar({ t, lang, setLang, xp, gainXP }) {
           
           <div className="bg-slate-800 border border-purple-500/50 px-4 py-1.5 rounded-full text-cyan-400 flex items-center gap-2">
             <span className="text-xs uppercase text-slate-400">XP:</span> 
-            <span className="font-black animate-pulse">{xp}</span>
+            <span className="font-black">
+              {xp} <span className="text-xs text-purple-400 font-normal">/ 500</span>
+              {xp >= 500 && <span className="text-xs text-cyan-300 font-bold ml-1">[MAX]</span>}
+            </span>
           </div>
           
           <button 

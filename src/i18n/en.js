@@ -1,5 +1,13 @@
 export const en = {
   nav: ['Home', 'About', 'History', 'Projects', 'Contact'],
+  heroLevelPrefix: 'Level',
+  militaryRanks: [
+    'Fleet Cadet',
+    'Vanguard Officer',
+    'Assault Lieutenant',
+    'Ship Commander',
+    'Fleet Admiral'
+  ],
   heroSubtitle: 'Backend Developer | Java & Spring Boot',
   aboutTitle: 'Player 1: About Me',
   aboutText: 'I am a Software Development student focused on Backend development. I work primarily with Java and Spring Boot, developing REST APIs and applications using JPA/Hibernate and MySQL. Through various projects, I aim to strengthen my knowledge in layered architecture and databases. I am eager to keep learning and participate in projects where I can contribute and grow as a developer.',
@@ -76,7 +84,7 @@ export const en = {
       ]
     },
     {
-      name: 'SistemaDeGestionYValidacion',
+      name: 'Foro UPC',
       desc: 'Institutional academic platform for UPC to manage and validate educational information: official resolutions, news publishing, role-based users, and structured comments.',
       fullDescription: 'Platform developed to centralize academic communication and administration for Universidad Provincial de Córdoba. Allows official publication of academic resolutions, institutional notices, and moderated community participation with audit trail logging.',
       architecture: 'Modular backend built with Java 17 and Spring Boot organized into Controllers, Services, and Repositories. Clean decoupling with server-side business validations, RBAC permissions, and relational persistence via Spring Data JPA.',

@@ -1,12 +1,16 @@
 
 export default function HeroSection({ t, xp, gainXP }) {
+  const currentLevel = Math.min(5, Math.floor(xp / 100) + 1);
+  const currentRank = t.militaryRanks?.[currentLevel - 1] || 'Cadete de la Flota';
+  const isMax = currentLevel === 5 && xp >= 500;
+
   return (
     <section id="inicio" className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-24 md:mb-32 relative">
       
       {/* CONTENEDOR DE TEXTO */}
       <div className="flex-1 space-y-6 text-center md:text-left relative z-20">
         <div className="inline-block px-3 py-1 bg-slate-800 border border-purple-500 text-purple-400 text-xs uppercase tracking-widest rounded-full mb-2 shadow-[0_0_10px_rgba(168,85,247,0.3)]">
-          Level {Math.floor(xp / 100) + 1} - Seeking Party
+          {t.heroLevelPrefix || 'Nivel'} {currentLevel} - {currentRank} {isMax ? '[MAX]' : ''}
         </div>
         <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
           Juan Cruz <br/> Larcher

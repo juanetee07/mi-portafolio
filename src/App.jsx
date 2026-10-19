@@ -18,7 +18,7 @@ export default function App() {
   const [xp, setXp] = useState(() => {
     try {
       const saved = localStorage.getItem('user_xp');
-      return saved !== null ? Math.max(0, parseInt(saved, 10) || 0) : 0;
+      return saved !== null ? Math.min(500, Math.max(0, parseInt(saved, 10) || 0)) : 0;
     } catch {
       return 0;
     }
@@ -26,7 +26,7 @@ export default function App() {
   const [scrollY, setScrollY] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
   const [toast, setToast] = useState(null);
-  const prevLevelRef = useRef(Math.floor(xp / 100) + 1);
+  const prevLevelRef = useRef(Math.min(5, Math.floor(xp / 100) + 1));
 
   // Sincronizar atributo lang en <html> para accesibilidad y SEO
   useEffect(() => {
@@ -51,15 +51,18 @@ export default function App() {
 
   const gainXP = (amount = 15) => {
     setXp((prev) => {
-      const newXp = prev + amount;
-      const currentLevel = Math.floor(newXp / 100) + 1;
-      if (currentLevel > prevLevelRef.current) {
-        prevLevelRef.current = currentLevel;
+      if (prev >= 500) return 500;
+      const newXp = Math.min(500, prev + amount);
+      const newLevel = Math.min(5, Math.floor(newXp / 100) + 1);
+      if (newLevel > prevLevelRef.current) {
+        prevLevelRef.current = newLevel;
+        const ranks = lang === 'es' ? es.militaryRanks : en.militaryRanks;
+        const rankName = ranks[newLevel - 1] || ranks[0];
         setToast({
-          title: lang === 'es' ? '⚡ ¡LEVEL UP DESBLOQUEADO!' : '⚡ LEVEL UP UNLOCKED!',
+          title: lang === 'es' ? '⚡ ¡ASCENSO MILITAR DESBLOQUEADO!' : '⚡ MILITARY PROMOTION UNLOCKED!',
           message: lang === 'es' 
-            ? `¡Felicidades! Has alcanzado el Nivel ${currentLevel}. ¡Sigue explorando el inventario!`
-            : `Congrats! You have reached Level ${currentLevel}. Keep exploring the inventory!`
+            ? `¡Felicidades! Has sido ascendido a ${rankName}${newLevel === 5 ? ' [Rango Máximo]' : ''}.`
+            : `Congrats! You have been promoted to ${rankName}${newLevel === 5 ? ' [Max Rank]' : ''}.`
         });
       }
       return newXp;

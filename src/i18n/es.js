@@ -1,5 +1,13 @@
 export const es = {
   nav: ['Inicio', 'Acerca de', 'Historial', 'Proyectos', 'Contacto'],
+  heroLevelPrefix: 'Nivel',
+  militaryRanks: [
+    'Cadete de la Flota',
+    'Oficial de Vanguardia',
+    'Teniente de Asalto',
+    'Comandante de Navío',
+    'Almirante de Flota'
+  ],
   heroSubtitle: 'Desarrollador Backend | Java & Spring Boot',
   aboutTitle: 'Player 1: Acerca de mí',
   aboutText: 'Soy estudiante de Desarrollo de Software orientado al desarrollo Backend. Trabajo principalmente con Java y Spring Boot, desarrollando APIs REST y aplicaciones utilizando JPA/Hibernate y MySQL. A través de proyectos busco fortalecer mi conocimiento en arquitectura en capas y bases de datos. Me interesa seguir aprendiendo y participar en proyectos donde pueda aportar y crecer como desarrollador.',
@@ -76,7 +84,7 @@ export const es = {
       ]
     },
     {
-      name: 'SistemaDeGestionYValidacion',
+      name: 'Foro UPC',
       desc: 'Plataforma web institucional para la gestión y validación de información académica en la UPC: resoluciones oficiales, novedades, usuarios con roles y comentarios estructurados.',
       fullDescription: 'Plataforma concebida para centralizar la comunicación y administración académica de la institución educativa. Permite la publicación segura y ordenada de resoluciones académicas oficiales, noticias institucionales y participación activa de la comunidad con control de permisos y trazabilidad de cambios.',
       architecture: 'Backend modular en Java 17 y Spring Boot organizado por capas (Controllers, Services, Repositories). Desacoplamiento limpio con validaciones de negocio en servidor, control de acceso por roles (RBAC) y persistencia relacional con Spring Data JPA.',
@@ -122,7 +130,7 @@ export const es = {
   ],
   contactTitle: 'Punto de Guardado (Contacto)',
   btnLang: 'Switch to English',
-  footerSubtitle: 'Level Complete',
+  footerSubtitle: 'Nivel Completado',
   footerAuthorPrefix: 'Diseñado y farmeado por',
   footerRights: 'Todos los derechos reservados.'
 };

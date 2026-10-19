@@ -3,7 +3,17 @@ export default function Footer({ t }) {
 
   return (
     <footer className="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md pt-8 pb-12 text-center text-slate-500 text-sm relative z-10 font-mono">
-      <div className="mb-4">
+      <div className="flex items-center justify-center gap-2.5 mb-4">
+        <div className="w-8 h-8 rounded-full overflow-hidden border border-cyan-400/70 bg-white shadow-[0_0_10px_rgba(6,182,212,0.3)] shrink-0 p-0.5">
+          <img 
+            src="/logo-bordercollie.webp" 
+            alt="Logo Border Collie" 
+            width="32" 
+            height="32" 
+            loading="lazy"
+            className="w-full h-full object-contain rounded-full" 
+          />
+        </div>
         <span className="uppercase font-bold tracking-widest text-slate-400 animate-pulse">
           {t?.footerSubtitle || 'Level Complete'}
         </span>

@@ -45,7 +45,7 @@ export default function ContactSection({ t, lang = 'es', onShowToast }) {
       <p className="text-slate-400 mb-8 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
         {isEs ? (
           <>
-            ¿Tienes una misión para mí o quieres armar una party? <br/>
+            ¿Tienes una misión para mí o quieres armar un equipo? <br/>
             Mi bandeja de entrada está siempre abierta. <br/><br/>
             <span className="text-cyan-400 font-bold font-mono">juancruzlarcher07@gmail.com</span> <br/>
             Cruz del Eje, Córdoba, Argentina
