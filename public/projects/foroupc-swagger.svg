@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#sw-grad)" rx="16"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#334155" stroke-width="2" rx="15"/>
+
+  <!-- Top Header bar -->
+  <rect x="0" y="0" width="800" height="55" fill="#0f172a" rx="16"/>
+  <rect x="25" y="15" width="28" height="28" rx="6" fill="#85ea2d"/>
+  <text x="32" y="34" fill="#111827" font-family="monospace" font-size="16" font-weight="900">{ }</text>
+  <text x="65" y="34" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="bold">Swagger UI <tspan fill="#64748b" font-size="14">/ OpenAPI 3.0</tspan></text>
+  <rect x="670" y="15" width="100" height="28" rx="6" fill="#0284c7"/>
+  <text x="685" y="34" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold">Authorize 🔒</text>
+
+  <!-- Title section -->
+  <text x="40" y="95" fill="#38bdf8" font-family="monospace" font-size="22" font-weight="bold">ForoUPC API Documentation</text>
+  <text x="40" y="120" fill="#94a3b8" font-family="monospace" font-size="12">[ Base URL: api.foroupc.edu.ar/v1 ] • OAS 3.0.1 Specification</text>
+
+  <!-- Endpoint 1: POST /topicos -->
+  <g transform="translate(40, 145)">
+    <rect width="720" height="48" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#10b981"/>
+    <text x="24" y="29" fill="#022c22" font-family="monospace" font-size="13" font-weight="900">POST</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/topicos</text>
+    <text x="360" y="29" fill="#a7f3d0" font-family="monospace" font-size="12">Registra un nuevo tópico en el foro educativo</text>
+    <text x="675" y="30" fill="#34d399" font-family="monospace" font-size="14">201</text>
+  </g>
+
+  <!-- Endpoint 2: GET /topicos -->
+  <g transform="translate(40, 205)">
+    <rect width="720" height="48" rx="8" fill="#0c4a6e" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#0284c7"/>
+    <text x="30" y="29" fill="#ffffff" font-family="monospace" font-size="13" font-weight="900">GET</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/topicos</text>
+    <text x="360" y="29" fill="#bae6fd" font-family="monospace" font-size="12">Listado paginado de tópicos con Spring Pageable</text>
+    <text x="675" y="30" fill="#38bdf8" font-family="monospace" font-size="14">200</text>
+  </g>
+
+  <!-- Endpoint 3: GET /topicos/{id} -->
+  <g transform="translate(40, 265)">
+    <rect width="720" height="48" rx="8" fill="#0c4a6e" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#0284c7"/>
+    <text x="30" y="29" fill="#ffffff" font-family="monospace" font-size="13" font-weight="900">GET</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/topicos/{id}</text>
+    <text x="360" y="29" fill="#bae6fd" font-family="monospace" font-size="12">Detalle de un tópico por ID con sus respuestas asociadas</text>
+    <text x="675" y="30" fill="#38bdf8" font-family="monospace" font-size="14">200</text>
+  </g>
+
+  <!-- Endpoint 4: PUT /topicos/{id} -->
+  <g transform="translate(40, 325)">
+    <rect width="720" height="48" rx="8" fill="#713f12" stroke="#eab308" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#eab308"/>
+    <text x="30" y="29" fill="#451a03" font-family="monospace" font-size="13" font-weight="900">PUT</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/topicos/{id}</text>
+    <text x="360" y="29" fill="#fef08a" font-family="monospace" font-size="12">Actualización total de título y mensaje</text>
+    <text x="675" y="30" fill="#facc15" font-family="monospace" font-size="14">200</text>
+  </g>
+
+  <!-- Endpoint 5: DELETE /topicos/{id} -->
+  <g transform="translate(40, 385)">
+    <rect width="720" height="48" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#ef4444"/>
+    <text x="18" y="29" fill="#ffffff" font-family="monospace" font-size="12" font-weight="900">DELETE</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/topicos/{id}</text>
+    <text x="360" y="29" fill="#fecaca" font-family="monospace" font-size="12">Eliminación lógica o física del tópico</text>
+    <text x="675" y="30" fill="#f87171" font-family="monospace" font-size="14">204</text>
+  </g>
+</svg>

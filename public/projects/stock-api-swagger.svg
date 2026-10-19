@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stk-sw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#stk-sw)" rx="16"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#334155" stroke-width="2" rx="15"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="55" fill="#0f172a" rx="16"/>
+  <rect x="25" y="15" width="28" height="28" rx="6" fill="#85ea2d"/>
+  <text x="32" y="34" fill="#111827" font-family="monospace" font-size="16" font-weight="900">{ }</text>
+  <text x="65" y="34" fill="#f8fafc" font-family="monospace" font-size="18" font-weight="bold">Swagger UI <tspan fill="#64748b" font-size="14">/ StockFlow OpenAPI</tspan></text>
+
+  <!-- Title section -->
+  <text x="40" y="95" fill="#34d399" font-family="monospace" font-size="22" font-weight="bold">Stock &amp; Orders RESTful API</text>
+  <text x="40" y="120" fill="#94a3b8" font-family="monospace" font-size="12">[ Server: localhost:8080/api/v1 ] • SpringDoc OpenAPI 2.0</text>
+
+  <!-- Endpoint 1: POST /productos -->
+  <g transform="translate(40, 145)">
+    <rect width="720" height="48" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#10b981"/>
+    <text x="24" y="29" fill="#022c22" font-family="monospace" font-size="13" font-weight="900">POST</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/productos</text>
+    <text x="350" y="29" fill="#a7f3d0" font-family="monospace" font-size="12">Alta de producto con SKU único y cálculo de lote</text>
+    <text x="675" y="30" fill="#34d399" font-family="monospace" font-size="14">201</text>
+  </g>
+
+  <!-- Endpoint 2: GET /productos/bajo-stock -->
+  <g transform="translate(40, 205)">
+    <rect width="720" height="48" rx="8" fill="#0c4a6e" stroke="#0284c7" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#0284c7"/>
+    <text x="30" y="29" fill="#ffffff" font-family="monospace" font-size="13" font-weight="900">GET</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/productos/bajo-stock</text>
+    <text x="350" y="29" fill="#bae6fd" font-family="monospace" font-size="12">Reporte de existencias por debajo del umbral mínimo</text>
+    <text x="675" y="30" fill="#38bdf8" font-family="monospace" font-size="14">200</text>
+  </g>
+
+  <!-- Endpoint 3: POST /pedidos/checkout -->
+  <g transform="translate(40, 265)">
+    <rect width="720" height="48" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#10b981"/>
+    <text x="24" y="29" fill="#022c22" font-family="monospace" font-size="13" font-weight="900">POST</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/pedidos/checkout</text>
+    <text x="350" y="29" fill="#a7f3d0" font-family="monospace" font-size="12">Procesa orden, descuenta stock y genera comprobante</text>
+    <text x="675" y="30" fill="#34d399" font-family="monospace" font-size="14">200</text>
+  </g>
+
+  <!-- Endpoint 4: PATCH /productos/{id}/stock -->
+  <g transform="translate(40, 325)">
+    <rect width="720" height="48" rx="8" fill="#713f12" stroke="#eab308" stroke-width="1.5"/>
+    <rect x="12" y="10" width="65" height="28" rx="4" fill="#eab308"/>
+    <text x="20" y="29" fill="#451a03" font-family="monospace" font-size="13" font-weight="900">PATCH</text>
+    <text x="95" y="30" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">/api/v1/productos/{id}/stock</text>
+    <text x="350" y="29" fill="#fef08a" font-family="monospace" font-size="12">Ajuste puntual de existencias por recepción o merma</text>
+    <text x="675" y="30" fill="#facc15" font-family="monospace" font-size="14">200</text>
+  </g>
+</svg>

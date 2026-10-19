@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ga-arch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#ga-arch)" rx="16"/>
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#334155" stroke-width="2" rx="15"/>
+
+  <!-- Top bar -->
+  <text x="40" y="45" fill="#60a5fa" font-family="monospace" font-size="20" font-weight="bold">ARQUITECTURA DE VALIDACIÓN Y CONTROL DE ACCESO</text>
+  <text x="40" y="70" fill="#94a3b8" font-family="monospace" font-size="12">Gestión Institucional de Información • Flujo de Publicación y Auditoría</text>
+
+  <!-- Flow Boxes -->
+  <!-- Box 1 -->
+  <g transform="translate(40, 110)">
+    <rect width="210" height="150" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="35" fill="#60a5fa" font-family="monospace" font-size="15" font-weight="bold">1. Autenticación &amp; Roles</text>
+    <text x="20" y="65" fill="#94a3b8" font-family="monospace" font-size="12">Directivos / Docentes / Alumnos</text>
+    <text x="20" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">Filtro de seguridad</text>
+    <text x="20" y="112" fill="#cbd5e1" font-family="monospace" font-size="11">Validación de identidad</text>
+    <text x="20" y="132" fill="#3b82f6" font-family="monospace" font-size="11">Control de permisos</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(295, 110)">
+    <rect width="210" height="150" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="20" y="35" fill="#34d399" font-family="monospace" font-size="15" font-weight="bold">2. Servicios &amp; Reglas</text>
+    <text x="20" y="65" fill="#94a3b8" font-family="monospace" font-size="12">Alta de Resoluciones</text>
+    <text x="20" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">Moderación de noticias</text>
+    <text x="20" y="112" fill="#cbd5e1" font-family="monospace" font-size="11">Comentarios estructurados</text>
+    <text x="20" y="132" fill="#10b981" font-family="monospace" font-size="11">Lógica Spring Boot</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(550, 110)">
+    <rect width="210" height="150" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="35" fill="#fbbf24" font-family="monospace" font-size="15" font-weight="bold">3. Persistencia &amp; Logs</text>
+    <text x="20" y="65" fill="#94a3b8" font-family="monospace" font-size="12">Base de Datos MySQL</text>
+    <text x="20" y="90" fill="#cbd5e1" font-family="monospace" font-size="11">Mapeo JPA / Hibernate</text>
+    <text x="20" y="112" fill="#cbd5e1" font-family="monospace" font-size="11">Registro de modificaciones</text>
+    <text x="20" y="132" fill="#fbbf24" font-family="monospace" font-size="11">Trazabilidad histórica</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M255 185 H290" stroke="#60a5fa" stroke-width="3"/>
+  <path d="M510 185 H545" stroke="#34d399" stroke-width="3"/>
+
+  <!-- Summary Box -->
+  <g transform="translate(40, 290)">
+    <rect width="720" height="120" rx="12" fill="#0f172a" stroke="#334155"/>
+    <text x="25" y="35" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="bold">▸ VALOR ACADÉMICO E IMPACTO</text>
+    <text x="25" y="65" fill="#94a3b8" font-family="monospace" font-size="12">✓ Centraliza la comunicación y oficialización de reglamentos académicos de la institución.</text>
+    <text x="25" y="88" fill="#94a3b8" font-family="monospace" font-size="12">✓ Evita la dispersión informativa asegurando que los comunicados provengan de usuarios autorizados.</text>
+    <text x="25" y="108" fill="#60a5fa" font-family="monospace" font-size="11">Diseñado para la Universidad Provincial de Córdoba (UPC).</text>
+  </g>
+</svg>
