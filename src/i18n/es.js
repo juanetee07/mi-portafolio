@@ -48,6 +48,8 @@ export const es = {
   projects: [
     {
       name: 'Turismo-Capilla',
+      featured: true,
+      badgeText: 'Proyecto Destacado • Flagship',
       desc: 'Plataforma integral y API REST desarrollada para la Comisión de Turismo de Capilla del Monte. Centraliza hospedajes, paseos turísticos, motor de reservas con prevención anti-overbooking y tokens de invitación.',
       fullDescription: 'Sistema integral desarrollado en el marco académico de la UPC para la Comisión de Turismo de Capilla del Monte. Conecta a turistas con alojamientos habilitados (cabañas, hoteles, campings), circuitos serranos y paseos locales, gestionando el ciclo completo de reservas directas con código único auditado (CAP-YYYY-XXXX).',
       architecture: 'Arquitectura limpia en capas con Java 17 y Spring Boot 3. Seguridad stateless con Spring Security 6 y JJWT con roles diferenciados (ADMIN, HOST, TOURIST). Onboarding seguro para prestadores mediante tokens de un solo uso con 7 días de validez. Documentación completa con SpringDoc OpenAPI / Swagger UI 2.8.5.',
@@ -114,55 +116,6 @@ export const es = {
           image: '/projects/villa-cielo-ui.svg', 
           title: 'Módulos de Trivia & SOS Incendios', 
           desc: 'Escaneo QR en senderos, fichas de flora nativa y protocolos de emergencia con accesibilidad.' 
-        }
-      ]
-    },
-    {
-      name: 'Backend ForoUPC',
-      desc: 'Desarrollo integral del backend para una plataforma de foros educativos. Implementación de entidades, relaciones JPA, repositorios y servicios CRUD con APIs REST seguras y documentadas.',
-      fullDescription: 'Plataforma backend concebida para la interacción y soporte académico. Provee endpoints REST para la creación, consulta paginada, actualización y cierre de tópicos de debate con respuestas marcadas como solución.',
-      architecture: 'Arquitectura en tres capas: Controladores REST (@RestController), Capa de Negocio (@Service) y Persistencia (@Repository con Spring Data JPA). Se utilizó JPA/Hibernate para optimizar el tiempo de desarrollo, garantizar portabilidad de motor de datos y aprovechar validaciones automáticas Jakarta.',
-      dbNotes: 'Base de datos relacional MySQL con integridad referencial (tablas usuarios, cursos, topicos y respuestas con foreign keys y borrado lógico).',
-      image: '/projects/foroupc-cover.svg',
-      repoUrl: 'https://github.com/juanetee07/BackendForoUPC',
-      technologies: ['Java 17', 'Spring Boot 3', 'Spring Data JPA', 'MySQL', 'Jakarta Validation', 'OpenAPI / Swagger'],
-      gallery: [
-        { 
-          image: '/projects/foroupc-cover.svg', 
-          title: 'Arquitectura en Capas & Flujo DTO', 
-          desc: 'Desacoplamiento limpio entre DTOs de entrada/salida y entidades persistentes de base de datos.' 
-        },
-        { 
-          image: '/projects/foroupc-swagger.svg', 
-          title: 'Documentación OpenAPI / Swagger', 
-          desc: 'Endpoints RESTful testeados para POST, GET paginado, PUT y DELETE con códigos HTTP semánticos.' 
-        },
-        { 
-          image: '/projects/foroupc-der.svg', 
-          title: 'Diagrama Entidad-Relación (DER)', 
-          desc: 'Esquema relacional de tablas con mapeo bidireccional y asociaciones @ManyToOne / @OneToMany.' 
-        }
-      ]
-    },
-    {
-      name: 'StockFlow API',
-      desc: 'API REST diseñada para gestión de existencias en tiempo real, alertas de bajo stock y procesamiento de órdenes, inspirada en procesos operativos reales.',
-      fullDescription: 'Microservicio backend creado para sistematizar el control de mercadería, recepción de lotes y despacho de pedidos. Diseñado para evitar discrepancias de inventario y optimizar la trazabilidad operativa.',
-      architecture: 'Implementación con transacciones ACID declarativas (@Transactional) para asegurar que el decremento de existencias y la confirmación de la orden ocurran de forma indivisible. Manejo de excepciones personalizadas para productos agotados.',
-      dbNotes: 'Tablas de productos, categorías, movimientos y pedidos con índices de búsqueda rápida por SKU.',
-      image: '/projects/stock-api-cover.svg',
-      repoUrl: 'https://github.com/juanetee07',
-      technologies: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'Transacciones ACID', 'SpringDoc OpenAPI'],
-      gallery: [
-        { 
-          image: '/projects/stock-api-cover.svg', 
-          title: 'Control de Stock y Módulos Logísticos', 
-          desc: 'Arquitectura modular para control de existencias críticas, alertas y gestión de pedidos.' 
-        },
-        { 
-          image: '/projects/stock-api-swagger.svg', 
-          title: 'Contrato OpenAPI / Swagger 3.0', 
-          desc: 'Especificación de endpoints para consulta de bajo stock, actualización de lotes y checkout.' 
         }
       ]
     }
