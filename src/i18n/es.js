@@ -62,24 +62,44 @@ export const es = {
       fullDescription: 'Sistema integral desarrollado en el marco académico de la UPC para la Comisión de Turismo de Capilla del Monte. Conecta a turistas con alojamientos habilitados (cabañas, hoteles, campings), circuitos serranos y paseos locales, gestionando el ciclo completo de reservas directas con código único auditado (CAP-YYYY-XXXX).',
       architecture: 'Arquitectura limpia en capas con Java 17 y Spring Boot 3. Seguridad stateless con Spring Security 6 y JJWT con roles diferenciados (ADMIN, HOST, TOURIST). Onboarding seguro para prestadores mediante tokens de un solo uso con 7 días de validez. Documentación completa con SpringDoc OpenAPI / Swagger UI 2.8.5.',
       dbNotes: 'Base de datos relacional PostgreSQL 18 con claves primarias UUID nativas, relaciones JPA bidireccionales e integridad referencial estricta.',
-      image: '/projects/turismo-capilla-cover.svg',
+      image: '/projects/turismo-capilla-cover.webp',
       repoUrl: 'https://github.com/Tiag4/Turismo-Capilla',
       technologies: ['Java 17', 'Spring Boot 3', 'Spring Security 6', 'JJWT', 'PostgreSQL 18', 'Spring Data JPA', 'Swagger / OpenAPI', 'Maven'],
       gallery: [
         { 
-          image: '/projects/turismo-capilla-cover.svg', 
-          title: 'Motor de Reservas & Hospedajes', 
-          desc: 'Control de disponibilidad por fechas, prevención estricta de overbooking y códigos auditados CAP-YYYY-XXXX.' 
+          image: '/projects/turismo-capilla-home.webp', 
+          title: 'Portal Oficial & Motor de Búsqueda', 
+          desc: 'Página principal con selector de fechas (check-in / check-out), cantidad de viajeros y reservas directas sin intermediarios.' 
         },
         { 
-          image: '/projects/turismo-capilla-swagger.svg', 
-          title: 'Documentación Swagger UI / OpenAPI 3.0', 
-          desc: 'Endpoints REST documentados con soporte para autenticación Bearer Token en operaciones protegidas.' 
+          image: '/projects/turismo-capilla-alojamientos.webp', 
+          title: 'Catálogo de Cabañas & Hospedajes', 
+          desc: 'Listado de alojamientos verificados con filtros por categoría (cabañas, hosterías, hoteles), comodidades y geolocalización.' 
         },
         { 
-          image: '/projects/turismo-capilla-der.svg', 
-          title: 'Diagrama Entidad-Relación (PostgreSQL)', 
-          desc: 'Modelo relacional normalizado con identificadores UUID nativos, alojamientos, reservas y tokens.' 
+          image: '/projects/turismo-capilla-reservas.webp', 
+          title: 'Consulta & Validación de Vouchers', 
+          desc: 'Validación en tiempo real del estado de reservas mediante código oficial auditado CAP-YYYY-XXXX y correo del titular.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-senderos.webp', 
+          title: 'Circuitos, Senderos & Cumbres Naturales', 
+          desc: 'Fichas técnicas de atractivos y excursiones (Cerro Uritorco, Los Terrones, La Toma) con niveles de dificultad y altimetría.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-como-llegar.webp', 
+          title: 'Módulo de Rutas & Conectividad', 
+          desc: 'Guía de movilidad terrestre y trazados recomendados (Autovía Variante Costa Azul, RN 38 y Tren de las Sierras).' 
+        },
+        { 
+          image: '/projects/turismo-capilla-arch.webp', 
+          title: 'Arquitectura del Sistema', 
+          desc: 'Diagrama oficial de capas (Controllers, Services, Repositories) con Spring Security, JWT y PostgreSQL.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-sequence.webp', 
+          title: 'Diagrama de Secuencia de Reserva', 
+          desc: 'Flujo de validación atómica de reservas, verificación de fechas y generación de código CAP-YYYY-XXXX.' 
         }
       ]
     },
@@ -89,19 +109,14 @@ export const es = {
       fullDescription: 'Plataforma concebida para centralizar la comunicación y administración académica de la institución educativa. Permite la publicación segura y ordenada de resoluciones académicas oficiales, noticias institucionales y participación activa de la comunidad con control de permisos y trazabilidad de cambios.',
       architecture: 'Backend modular en Java 17 y Spring Boot organizado por capas (Controllers, Services, Repositories). Desacoplamiento limpio con validaciones de negocio en servidor, control de acceso por roles (RBAC) y persistencia relacional con Spring Data JPA.',
       dbNotes: 'Base de datos relacional MySQL optimizada para auditoría, almacenamiento de resoluciones y control de usuarios.',
-      image: '/projects/gestion-academica-cover.svg',
+      image: '/projects/gestion-academica-cover.webp',
       repoUrl: 'https://github.com/juanetee07/SistemaDeGestionYValidacion',
       technologies: ['Java 17', 'Spring Boot', 'MySQL', 'Spring Data JPA', 'APIs REST', 'Control de Roles (RBAC)', 'Auditoría'],
       gallery: [
         { 
-          image: '/projects/gestion-academica-cover.svg', 
-          title: 'Gestión Institucional de Resoluciones', 
-          desc: 'Centralización de reglamentos, novedades oficiales y participación comunitaria moderada.' 
-        },
-        { 
-          image: '/projects/gestion-academica-arch.svg', 
-          title: 'Arquitectura de Validación & Roles', 
-          desc: 'Flujo de autenticación, control de permisos RBAC y registro histórico de cambios.' 
+          image: '/projects/gestion-academica-der.webp', 
+          title: 'Modelo Entidad-Relación (MySQL)', 
+          desc: 'Diagrama relacional oficial con entidades de usuarios, roles, resoluciones, comentarios y trazabilidad de auditoría.' 
         }
       ]
     },
@@ -111,19 +126,29 @@ export const es = {
       fullDescription: 'Aplicación web orientada a la educación ambiental y preservación de la biodiversidad en la Reserva Natural Villa Cielo (Capilla del Monte). Ofrece a los visitantes una experiencia inmersiva en territorio con escáner de códigos QR, desbloqueo de personajes, biblioteca de flora serrana y acceso directo a números de emergencia.',
       architecture: 'Desarrollado en React 19 con Vite y Tailwind CSS v4. Implementa arquitectura basada en componentes, hooks personalizados para estado de recompensas y perfil, enrutamiento con React Router e iconografía vectorial con Lucide React. Integra diseño responsive mobile-first y soporte de accesibilidad.',
       dbNotes: 'Gestión de datos de catálogo botánico, preguntas de trivia y estado de desbloqueos en cliente.',
-      image: '/projects/villa-cielo-cover.svg',
+      image: '/projects/villa-cielo-cover.webp',
       repoUrl: 'https://github.com/MayraMoy/cielo',
       technologies: ['React 19', 'Vite', 'Tailwind CSS', 'Lucide React', 'React Router', 'Escáner QR', 'Accesibilidad UX'],
       gallery: [
         { 
-          image: '/projects/villa-cielo-cover.svg', 
-          title: 'Reserva Natural Villa Cielo', 
-          desc: 'Educación ambiental interactiva, fichas de biodiversidad y concientización territorial.' 
+          image: '/projects/villa-cielo-home.webp', 
+          title: 'Inicio & Gamificación Territorial', 
+          desc: 'Pantalla principal con saludo personalizado, desbloqueo de personajes de la reserva, datos curiosos del monte con la mascota y acceso directo a SOS Incendios.' 
         },
         { 
-          image: '/projects/villa-cielo-ui.svg', 
-          title: 'Módulos de Trivia & SOS Incendios', 
-          desc: 'Escaneo QR en senderos, fichas de flora nativa y protocolos de emergencia con accesibilidad.' 
+          image: '/projects/villa-cielo-fichas.webp', 
+          title: 'Catálogo de Biodiversidad & Red Trófica', 
+          desc: 'Colección interactiva de especies nativas (Molle, Carpincho, Halcón, Espinillo) y progreso del visitante (Guardaparque Maestro).' 
+        },
+        { 
+          image: '/projects/villa-cielo-trivia.webp', 
+          title: 'Trivias Educativas en Senderos (QR)', 
+          desc: 'Desafíos botánicos y de ecosistema con temporizador y preguntas de opción múltiple activadas por código QR en el territorio.' 
+        },
+        { 
+          image: '/projects/villa-cielo-onboarding.webp', 
+          title: 'Comunidad & Accesibilidad', 
+          desc: 'Registro adaptado a la edad (modo adulto / infantil), inicio de sesión con Google y soporte de accesibilidad visual (A+).' 
         }
       ]
     }

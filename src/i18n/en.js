@@ -62,24 +62,44 @@ export const en = {
       fullDescription: 'Academic platform developed for Capilla del Monte Tourism Board (UPC). Connects travelers with authorized accommodations (cabins, hotels, campsites), trails, and attractions, handling direct bookings with audited codes (CAP-YYYY-XXXX).',
       architecture: 'Layered clean architecture built with Java 17 and Spring Boot 3. Stateless authentication with Spring Security 6 and JJWT with role-based access control (ADMIN, HOST, TOURIST). Single-use invitation tokens with 7-day expiration for secure host onboarding. Documented with SpringDoc OpenAPI / Swagger UI 2.8.5.',
       dbNotes: 'PostgreSQL 18 relational database with native UUID primary keys, bidirectional JPA mappings, and strict referential integrity.',
-      image: '/projects/turismo-capilla-cover.svg',
+      image: '/projects/turismo-capilla-cover.webp',
       repoUrl: 'https://github.com/Tiag4/Turismo-Capilla',
       technologies: ['Java 17', 'Spring Boot 3', 'Spring Security 6', 'JJWT', 'PostgreSQL 18', 'Spring Data JPA', 'Swagger / OpenAPI', 'Maven'],
       gallery: [
         { 
-          image: '/projects/turismo-capilla-cover.svg', 
-          title: 'Booking Engine & Accommodations', 
-          desc: 'Check-in/check-out availability validation, strict anti-overbooking logic, and audited reservation codes.' 
+          image: '/projects/turismo-capilla-home.webp', 
+          title: 'Official Portal & Search Engine', 
+          desc: 'Main landing page featuring date range pickers (check-in / check-out), guest counters, and direct bookings without intermediaries.' 
         },
         { 
-          image: '/projects/turismo-capilla-swagger.svg', 
-          title: 'Swagger UI / OpenAPI 3.0 Documentation', 
-          desc: 'Documented REST endpoints with Bearer Token authorization for host and admin operations.' 
+          image: '/projects/turismo-capilla-alojamientos.webp', 
+          title: 'Lodging & Cabin Catalog', 
+          desc: 'Verified accommodations directory with categories (cabins, inns, hotels), amenity filters, and direct host pricing.' 
         },
         { 
-          image: '/projects/turismo-capilla-der.svg', 
-          title: 'Entity-Relationship Model (PostgreSQL)', 
-          desc: 'Normalized schema with native UUIDs, mapped accommodations, bookings, and invitation tokens.' 
+          image: '/projects/turismo-capilla-reservas.webp', 
+          title: 'Official Voucher Validation', 
+          desc: 'Real-time reservation status checking using audited CAP-YYYY-XXXX codes and guest email verification.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-senderos.webp', 
+          title: 'Trails, Summits & Natural Reserves', 
+          desc: 'Interactive nature guide featuring Mount Uritorco, Los Terrones, and waterfalls with technical trail difficulties.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-como-llegar.webp', 
+          title: 'Transit & Route Guidelines', 
+          desc: 'Comprehensive regional connectivity guide (RN 38, Costa Azul Highway, and historical scenic train routes).' 
+        },
+        { 
+          image: '/projects/turismo-capilla-arch.webp', 
+          title: 'System Architecture', 
+          desc: 'Official multi-tier architecture diagram (Controllers, Services, Repositories) with Spring Security, JWT, and PostgreSQL.' 
+        },
+        { 
+          image: '/projects/turismo-capilla-sequence.webp', 
+          title: 'Reservation Sequence Flow', 
+          desc: 'Atomic booking verification flow, date interval validation, and CAP-YYYY-XXXX audit code generation.' 
         }
       ]
     },
@@ -89,19 +109,14 @@ export const en = {
       fullDescription: 'Platform developed to centralize academic communication and administration for Universidad Provincial de Córdoba. Allows official publication of academic resolutions, institutional notices, and moderated community participation with audit trail logging.',
       architecture: 'Modular backend built with Java 17 and Spring Boot organized into Controllers, Services, and Repositories. Clean decoupling with server-side business validations, RBAC permissions, and relational persistence via Spring Data JPA.',
       dbNotes: 'Relational MySQL database optimized for audit trail logging, resolution management, and user permissions.',
-      image: '/projects/gestion-academica-cover.svg',
+      image: '/projects/gestion-academica-cover.webp',
       repoUrl: 'https://github.com/juanetee07/SistemaDeGestionYValidacion',
       technologies: ['Java 17', 'Spring Boot', 'MySQL', 'Spring Data JPA', 'REST APIs', 'RBAC Control', 'Audit Trail'],
       gallery: [
         { 
-          image: '/projects/gestion-academica-cover.svg', 
-          title: 'Institutional Resolution Management', 
-          desc: 'Centralization of official regulations, notices, and moderated community discussions.' 
-        },
-        { 
-          image: '/projects/gestion-academica-arch.svg', 
-          title: 'Validation & Roles Architecture', 
-          desc: 'Authentication flow, RBAC access control, and historical change tracking.' 
+          image: '/projects/gestion-academica-der.webp', 
+          title: 'Entity-Relationship Model (MySQL)', 
+          desc: 'Official relational schema mapping users, roles, academic resolutions, comments, and audit logging history.' 
         }
       ]
     },
@@ -111,19 +126,29 @@ export const en = {
       fullDescription: 'Web application designed for environmental awareness and biodiversity education in the Villa Cielo Nature Reserve (Capilla del Monte). Allows on-site visitors to scan QR codes on trails, unlock characters, browse botanical guides, and access quick emergency contacts.',
       architecture: 'Built with React 19, Vite, and Tailwind CSS v4. Implements component-driven architecture, custom hooks for reward state and profile persistence, React Router navigation, and Lucide React icons. Features mobile-first responsive design and visual accessibility modes.',
       dbNotes: 'Client-side data structures optimized for botanical cataloging, trivia quizzes, and character progression.',
-      image: '/projects/villa-cielo-cover.svg',
+      image: '/projects/villa-cielo-cover.webp',
       repoUrl: 'https://github.com/MayraMoy/cielo',
       technologies: ['React 19', 'Vite', 'Tailwind CSS', 'Lucide React', 'React Router', 'QR Gamification', 'Accessibility UX'],
       gallery: [
         { 
-          image: '/projects/villa-cielo-cover.svg', 
-          title: 'Villa Cielo Nature Reserve', 
-          desc: 'Interactive environmental education, biodiversity cards, and community wildfire prevention.' 
+          image: '/projects/villa-cielo-home.webp', 
+          title: 'Home & Trail Gamification', 
+          desc: 'Main screen with personalized greeting, nature reserve character progression, owl mascot tips, and quick access to SOS Fire protocol.' 
         },
         { 
-          image: '/projects/villa-cielo-ui.svg', 
-          title: 'Trivia Modules & Fire Safety', 
-          desc: 'On-trail QR scanning, native flora library, and SOS emergency protocols adapted for all ages.' 
+          image: '/projects/villa-cielo-fichas.webp', 
+          title: 'Biodiversity Catalog & Food Web', 
+          desc: 'Interactive native species collection (Molle, Capybara, Hawk, Espinillo) and visitor trail progress (Master Park Ranger).' 
+        },
+        { 
+          image: '/projects/villa-cielo-trivia.webp', 
+          title: 'Interactive Trail Trivia (QR)', 
+          desc: 'Botanical and ecosystem challenges with real-time countdown timer triggered via on-trail QR codes.' 
+        },
+        { 
+          image: '/projects/villa-cielo-onboarding.webp', 
+          title: 'Community & Accessibility', 
+          desc: 'Age-adaptive user registration (kids / adult mode), Google sign-in, and visual accessibility with enlarged font scale (A+).' 
         }
       ]
     }
